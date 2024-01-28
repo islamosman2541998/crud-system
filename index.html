@@ -1,0 +1,85 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    
+<div class="w-75 mx-auto bg-info rounded p-3">
+        <h1 class="text-center">Crud System</h1>
+
+        <div>
+        <label for="productNameInput">product name</label>
+        <input oninput="validationName()" class="form-control is-valid is-invalid  " type="text" id="productNameInput">
+
+        <div id="nameMessage" class="alert alert-danger d-none ">you should......</div>
+
+
+
+        </div>
+
+        <div>
+            <label for="productPriceInput">product price</label>
+            <input class="form-control" type="number" id="productPriceInput">
+    
+           
+        </div>
+        <div>
+            <label for="productGatagryInput">product gatagry</label>
+            <input class="form-control" type="text" id="productGatagryInput">
+            
+           
+        </div>
+        <div>
+            <label for="productDescriptionInput">product description</label>
+            <textarea class="form-control" id="productDescriptionInput" ></textarea> 
+        </div>
+
+       
+        <button id="addBtn" onclick="addproduct()" class="btn btn-primary mt-3 w-100">add product</button>
+        <button id="updateBtn" onclick="updateproduct()" class="d-none btn btn-primary mt-3 w-100">update product</button>
+       
+        
+       
+        <input id="searchInput" oninput="search()" class="form-control my-3  w-75 mx-auto " placeholder="search by name" type="search">
+        <table class="table my-3 text-center ">
+            <thead>
+                <tr>
+                    
+                    <th>Id</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>gatagry</th>
+                    <th>desc</th>
+                    <th>action</th>
+
+                </tr>
+            </thead>
+            <tbody id ="tableBody">
+               
+            </tbody>
+
+        </table>
+</div>
+
+
+
+ <script src="js/bootstrap.bundle.min.js"></script> 
+ <script src="js/main.js"></script>  
+</body>
+</html>
